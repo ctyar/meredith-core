@@ -1,0 +1,25 @@
+# https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: Pull request workflow
+
+on: pull_request
+
+env:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+
+jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.202
+
+    - name: Run the tests
+      run: dotnet test --configuration Release

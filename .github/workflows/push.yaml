@@ -1,0 +1,39 @@
+# https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: Push workflow
+
+on:
+  push:
+    branches:
+      - ci
+      - master
+      - 'release/**'
+
+env:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+
+jobs:
+  build:
+    name: Build & deploy
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.202
+        source-url: https://nuget.pkg.github.com/whynotearth/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}} 
+
+    - name: Run the tests
+      run: dotnet test --configuration Release
+
+    - name: Pack the NuGet package
+      run: dotnet pack WhyNotEarth.Meredith.App/WhyNotEarth.Meredith.App.csproj --configuration Release --output nupkgs
+
+    - name: Publish to GitHub Package Registry
+      run: Get-ChildItem nupkgs/*.nupkg | % { dotnet nuget push $_ --skip-duplicate --no-symbols true }

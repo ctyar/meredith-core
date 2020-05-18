@@ -4,6 +4,8 @@
     <VersionPrefix>0.9.0</VersionPrefix>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <RepositoryUrl>https://github.com/whynotearth/meredith-core</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="wwwroot" />

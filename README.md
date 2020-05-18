@@ -1,6 +1,7 @@
 <img src="https://user-images.githubusercontent.com/5694308/67922376-2e05ff80-fbdd-11e9-8e9e-58b52ca151b9.png" alt="Why Not Earth" width="60" align="right">
 
 # Meredith Core 
+![Main](https://github.com/whynotearth/meredith-core/workflows/Main/badge.svg)
 [![discord](https://img.shields.io/discord/453020970354081812.svg)](https://discord.gg/EBpyFM3)
 [![Twitch Status](https://img.shields.io/twitch/status/paulchrisluke)](https://www.twitch.tv/paulchrisluke/)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-success)
