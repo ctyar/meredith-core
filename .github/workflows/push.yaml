@@ -2,7 +2,10 @@
 
 name: Push workflow
 
-on: push
+on:
+  push:
+    branches:
+      - teta
 
 env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
