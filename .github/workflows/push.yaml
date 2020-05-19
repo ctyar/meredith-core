@@ -2,12 +2,7 @@
 
 name: Push workflow
 
-on:
-  push:
-    branches:
-      - ci
-      - master
-      - 'release/**'
+on: push
 
 env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
