@@ -6,6 +6,7 @@
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-success)
 [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?style=flat)](https://www.paypal.me/paulchrisluke)
 
+
 Meredith is a way to build web pages that render with reliable and fast performance in a seamless experience. Built for developing countries, it streamlines the creation of basic yet performant websites.
 
 Leveraging a backend .NET REST API which manages our database (PostgreSQL, Google Cloud), data is used by meredith-core to provide endpoints to any front end team. All content for websites, email marketing, ad buying, etc. is all stored in the same database, allowing easy content management for large brands and marketing agencies.
