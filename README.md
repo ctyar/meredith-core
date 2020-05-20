@@ -1,5 +1,6 @@
 <img src="https://user-images.githubusercontent.com/5694308/67922376-2e05ff80-fbdd-11e9-8e9e-58b52ca151b9.png" alt="Why Not Earth" width="60" align="right">
 
+
 # Meredith Core 
 [![Build Status](https://dev.azure.com/whynotearth/meredith-core/_apis/build/status/ctyar.meredith-core?branchName=azure)](https://dev.azure.com/whynotearth/meredith-core/_build/latest?definitionId=1&branchName=azure)
 [![discord](https://img.shields.io/discord/453020970354081812.svg)](https://discord.gg/EBpyFM3)
